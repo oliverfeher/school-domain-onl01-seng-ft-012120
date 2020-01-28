@@ -2,7 +2,7 @@ class School
 
   attr_reader :roster, :name #have to create reader for name
   
-  def initialize(name) #initialize with name, but must create reader
+  def initialize(name) #initialize with name and roster, but must create reader for name
     @name = name 
     @roster = {}
   end
