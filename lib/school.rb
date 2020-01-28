@@ -2,7 +2,7 @@ class School
 
   attr_reader :roster, :name #have to create reader for name
   
-  def initialize(name) #initialize with name and roster, but must create reader for name
+  def initialize(name) #initialize with name, but must create reader
     @name = name 
     @roster = {}
   end
@@ -14,4 +14,11 @@ class School
     @roster[grade] = [student_name]
     end
   end
+
+  def grade(grade)
+    if roster.include?(grade)
+      roster[grade].map { |student| student}
+    end
+  end
+
 end
